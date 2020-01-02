@@ -1,7 +1,8 @@
 # qunar
 
 > A Vue.js project
-> 仿写去哪网的手机端页面
+
+仿写去哪网的手机端页面
 ## Build Setup
 
 ``` bash
