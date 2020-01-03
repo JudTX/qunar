@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper class="swiper-icon" :options="swiperOptionicon">
+    <swiper class="swiper-icon" :options="swiperOptionicon" v-if="showSwiper">
       <swiper-slide v-for="(page, index) of pages" :key="index">
         <div class="icon" v-for="item in page" :key="item.id">
           <div class="icon-img">
@@ -18,61 +18,64 @@
 <script>
 export default {
   name: 'homeicons',
+  props: {
+    iconlist: Array
+  },
   data () {
     return {
       swiperOptionicon: {
         pagination: '.swiper-pagination'
-      },
-      iconlist: [{
-        id: '1',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-        name: '景点门票'
-      },
-      {
-        id: '2',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/6c/9e54a8540fee0102.png',
-        name: '故宫'
-      },
-      {
-        id: '3',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/fc/b10a6b2e4f0fe102.png',
-        name: '陶然亭冰雪'
-      },
-      {
-        id: '4',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/fc/b10a6b2e4f0fe102.png',
-        name: '静之湖滑雪'
-      },
-      {
-        id: '5',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-        name: '一日游'
-      },
-      {
-        id: '6',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/67/9a1678221b8e0e02.png',
-        name: '古北水镇'
-      },
-      {
-        id: '7',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/fc/b10a6b2e4f0fe102.png',
-        name: '北京滑雪'
-      },
-      {
-        id: '8',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/c1/6f15f887179fa002.png',
-        name: '颐和园'
-      },
-      {
-        id: '9',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png',
-        name: '泡温泉'
-      },
-      {
-        id: '10',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-        name: '北京必游'
-      }]
+      }
+      // iconlist: [{
+      //   id: '1',
+      //   imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
+      //   name: '景点门票'
+      // },
+      // {
+      //   id: '2',
+      //   imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/6c/9e54a8540fee0102.png',
+      //   name: '故宫'
+      // },
+      // {
+      //   id: '3',
+      //   imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/fc/b10a6b2e4f0fe102.png',
+      //   name: '陶然亭冰雪'
+      // },
+      // {
+      //   id: '4',
+      //   imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/fc/b10a6b2e4f0fe102.png',
+      //   name: '静之湖滑雪'
+      // },
+      // {
+      //   id: '5',
+      //   imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
+      //   name: '一日游'
+      // },
+      // {
+      //   id: '6',
+      //   imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/67/9a1678221b8e0e02.png',
+      //   name: '古北水镇'
+      // },
+      // {
+      //   id: '7',
+      //   imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/fc/b10a6b2e4f0fe102.png',
+      //   name: '北京滑雪'
+      // },
+      // {
+      //   id: '8',
+      //   imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/c1/6f15f887179fa002.png',
+      //   name: '颐和园'
+      // },
+      // {
+      //   id: '9',
+      //   imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png',
+      //   name: '泡温泉'
+      // },
+      // {
+      //   id: '10',
+      //   imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
+      //   name: '北京必游'
+      // }]
     }
   },
   computed: {
@@ -86,6 +89,9 @@ export default {
         pages[page].push(item)
       })
       return pages
+    },
+    showSwiper () {
+      return this.iconlist.length
     }
   }
 }
