@@ -4,6 +4,8 @@
 
 仿写去哪网的手机端页面
 
+## 首页预览
+  ![首页预览](https://github.com/JudTX/qunar/raw/master/img/qunar-index1.png) ![首页预览](https://github.com/JudTX/qunar/raw/master/img/qunar-index2.png)
 ## Build Setup
 
 ``` bash
