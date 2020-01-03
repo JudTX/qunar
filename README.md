@@ -5,7 +5,7 @@
 仿写去哪网的手机端页面
 
 ##首页展示
-> ![首页展示]('http://39.106.112.168/image/qunar.gif')
+> ![首页展示](http://39.106.112.168/image/qunar.gif)
 ## Build Setup
 
 ``` bash
