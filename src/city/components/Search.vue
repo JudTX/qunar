@@ -5,7 +5,13 @@
     </div>
     <div class="search-content" ref="search" v-show="keyword">
       <ul>
-        <li v-for="item of list" :key="item.id" class="item border-bottom">{{item.name}}</li>
+        <li v-for="item of list"
+        :key="item.id"
+        class="item border-bottom"
+        @click="handlechangeCity(item.name)"
+        >
+          {{item.name}}
+        </li>
         <li class="item border-bottom" v-show="noData">没有找到相关内容</li>
       </ul>
     </div>
@@ -29,6 +35,15 @@ export default {
   computed: {
     noData () {
       return !this.list.length
+    }
+  },
+  methods: {
+    handlechangeCity (city) {
+      // console.log(city)
+      // 通过控制actions来改变数据，但项目数据逻辑简单可直接通过组件操控Mutations更改数据
+      // this.$store.dispatch('changeCity', city)
+      this.$store.commit('changecity', city)
+      this.$router.push('/')
     }
   },
   watch: {

@@ -5,21 +5,29 @@
       <div class="title border-topbottom">当前城市</div>
       <div class="button-list">
         <div class="button-wrapper">
-          <div class="button">北京</div>
+          <div class="button">{{this.$store.state.city}}</div>
         </div>
       </div>
     </div>
     <div class="area">
       <div class="title border-topbottom">热门城市</div>
       <div class="button-list">
-        <div class="button-wrapper" v-for="item of hotcities" :key="item.id">
+        <div class="button-wrapper"
+        v-for="item of hotcities"
+        :key="item.id"
+        @click="handleCityClick(item.name)"
+        >
           <div class="button">{{item.name}}</div>
         </div>
       </div>
     </div>
     <div class="area" v-for="(item, key) of cities" :key="key" :ref="key">
       <div class="title border-topbottom">{{key}}</div>
-      <div class="item-list" v-for="innerItem of item" :key="innerItem.id">
+      <div class="item-list"
+      v-for="innerItem of item"
+      :key="innerItem.id"
+      @click="handleCityClick(innerItem.name)"
+      >
         <div class="item border-bottom">{{innerItem.name}}</div>
       </div>
     </div>
@@ -47,6 +55,14 @@ export default {
         // console.log(element)
         this.scroll.scrollToElement(element)
       }
+    }
+  },
+  methods: {
+    handleCityClick (city) {
+      // 通过控制actions来改变数据，但项目数据逻辑简单可直接通过组件操控Mutations更改数据
+      this.$store.commit('changecity', city)
+      // console.log(city)
+      this.$router.push('/')
     }
   }
 }
