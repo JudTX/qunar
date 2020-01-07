@@ -3,16 +3,18 @@
     <div class="left"><div class="iconfont back-icon">&#xe624;</div></div>
     <div class="search"><span class="iconfont">&#xe632;</span> 输入城市/景点/游玩主题</div>
     <router-link to='/city'>
-      <div class="right">{{this.$store.state.city}}<span class="iconfont arrow-icon">&#xe64a;</span></div>
+      <div class="right">{{this.city}}<span class="iconfont arrow-icon">&#xe64a;</span></div>
     </router-link>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'homeheader',
-  props: {
-    city: String
+  computed: {
+    // 把state中数据全部映射到city计算属性中
+    ...mapState(['city'])
   }
 }
 </script>
@@ -42,8 +44,9 @@ export default {
       border-radius: .1rem
       color: #ccc
     .right
-      width: 1.24rem
+      min-width: 1.04rem
       float: right
+      padding: 0 .1rem
       text-align: center
       color white
       .arrow-icon
