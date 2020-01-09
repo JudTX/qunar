@@ -10,10 +10,11 @@
   <img src="https://github.com/JudTX/qunar/raw/master/img/qunar-index.gif" width=40% alt="效果展示"/>
   
 ## 城市页面预览和功能展示
-  <img src="https://github.com/JudTX/qunar/raw/master/img/city-list.gif" width=40% alt="页面预览" /> <img src="https://github.com/JudTX/qunar/raw/master/img/city-list-feature.gif" width=40% alt=功能展示" />
-
+  <img src="https://github.com/JudTX/qunar/raw/master/img/city-list.gif" width=40% alt="页面预览" />
+  <img src="https://github.com/JudTX/qunar/raw/master/img/city-list-feature.gif" width=40% alt=功能展示" />
+    
 ## Build Setup
-
+    
 ``` bash
 # install dependencies
 npm install
