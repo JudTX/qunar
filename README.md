@@ -8,9 +8,9 @@
   ![首页预览](https://github.com/JudTX/qunar/raw/master/img/qunar-index1.png) ![首页预览](https://github.com/JudTX/qunar/raw/master/img/qunar-index2.png)
 ### 首页效果展示
   ![效果展示](https://github.com/JudTX/qunar/raw/master/img/qunar-index.gif)
-  <img src="https://github.com/JudTX/qunar/raw/master/img/qunar-index.gif" style="width:80%;" alt="效果展示"/>
+  <img src="https://github.com/JudTX/qunar/raw/master/img/qunar-index.gif" width=80% alt="效果展示"/>
 ## 城市页面预览和功能展示
-![页面预览和功能展示](https://github.com/JudTX/qunar/raw/master/img/city-list.gif){width: 80%} ![功能展示](https://github.com/JudTX/qunar/raw/master/img/city-list-feature.gif)
+![页面预览和功能展示](https://github.com/JudTX/qunar/raw/master/img/city-list.gif) ![功能展示](https://github.com/JudTX/qunar/raw/master/img/city-list-feature.gif)
 
 ## Build Setup
 
