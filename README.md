@@ -10,7 +10,7 @@
   ![效果展示](https://github.com/JudTX/qunar/raw/master/img/qunar-index.gif)
 
 ## 城市页面预览和功能展示
-![页面预览和功能展示](https://github.com/JudTX/qunar/raw/master/img/city-list.gif) ![功能展示](https://github.com/JudTX/qunar/raw/master/img/city-list-feature.gif)
+![页面预览和功能展示](https://github.com/JudTX/qunar/raw/master/img/city-list.gif){width: 80%} ![功能展示](https://github.com/JudTX/qunar/raw/master/img/city-list-feature.gif)
 
 ## Build Setup
 
