@@ -12,7 +12,10 @@
 ## 城市页面预览和功能展示
   <img src="https://github.com/JudTX/qunar/raw/master/img/city-list.gif" width=40% alt="页面预览" />
   <img src="https://github.com/JudTX/qunar/raw/master/img/city-list-feature.gif" width=40% alt=功能展示" />
-    
+
+## 详情页面
+  <img src="https://github.com/JudTX/qunar/raw/master/img/detail.gif" width=40% alt="详情页面" />
+  
 ## Build Setup
     
 ``` bash
