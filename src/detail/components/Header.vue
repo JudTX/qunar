@@ -25,6 +25,7 @@ export default {
   },
   methods: {
     handleScroll () {
+      // console.log('scroll')
       const top = document.documentElement.scrollTop
       if (top > 60) {
         let opacity = top / 140
@@ -36,8 +37,11 @@ export default {
       }
     }
   },
-  activated () {
+  activated () { // 页面被展示时执行
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () { // 页面关闭时执行
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
