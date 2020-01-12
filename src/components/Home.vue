@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     getInfo () {
-      axios.get('/api/index.json?city=' + this.city).then(this.getinfosucc)
+      axios.get('http://rap2api.taobao.org/app/mock/242514/index/data?city=' + this.city).then(this.getinfosucc)
     },
     getinfosucc (res) {
       res = res.data

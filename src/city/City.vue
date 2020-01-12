@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     getCity () {
-      axios.get('/api/city.json').then(
+      axios.get('http://rap2api.taobao.org/app/mock/242514/city/data').then(
         this.handleGetCity
       )
     },

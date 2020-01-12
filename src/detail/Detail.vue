@@ -1,6 +1,10 @@
 <template>
   <div>
-    <detailbanner></detailbanner>
+    <detailbanner
+    :sightName="sightName"
+    :bannerImg="bannerImg"
+    :gallaryImgs="gallaryImgs"
+    ></detailbanner>
     <detailheader></detailheader>
     <div class="conter">
       <detaillist :list="list"></detaillist>
@@ -12,6 +16,7 @@
 import detailbanner from './components/Banner'
 import detailheader from './components/Header'
 import detaillist from './components/List'
+import axios from 'axios'
 export default {
   name: 'detail',
   components: {
@@ -21,24 +26,33 @@ export default {
   },
   data () {
     return {
-      list: [{
-        title: '成人票',
-        children: [{
-          title: '成人三馆联票',
-          children: [{
-            title: '【当日全天票+送手机电子讲解】身份证/护照/港澳台快速入园'
-          }]
-        }, {
-          title: '成人五馆联票'
-        }]
-      }, {
-        title: '儿童票'
-      }, {
-        title: '学生票'
-      }, {
-        title: '特惠票'
-      }]
+      sightName: '',
+      bannerImg: '',
+      gallaryImgs: [],
+      list: []
     }
+  },
+  methods: {
+    getDetailInfo () {
+      axios.get('http://rap2api.taobao.org/app/mock/242514/detail/data', {
+        params: {
+          id: this.$route.params.id
+        }
+      }).then(this.handleGetDataSucc)
+    },
+    handleGetDataSucc (res) {
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        this.sightName = data.sightName
+        this.bannerImg = data.bannerImg
+        this.gallaryImgs = data.gallaryImgs
+        this.list = data.categoryList
+      }
+    }
+  },
+  mounted () {
+    this.getDetailInfo()
   }
 }
 </script>
