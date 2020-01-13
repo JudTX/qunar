@@ -1,8 +1,9 @@
 # qunar
 
-> A Vue.js project
+> A Vue.js project  
 
-仿写去哪网的手机端页面
+仿写去哪网的手机端页面 <br/>
+    [预览地址](http://39.106.112.168/qunar)
 
 ## 首页预览
   ![首页预览](https://github.com/JudTX/qunar/raw/master/img/qunar-index1.png) ![首页预览](https://github.com/JudTX/qunar/raw/master/img/qunar-index2.png)
