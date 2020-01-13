@@ -4,7 +4,7 @@
 
 仿写去哪网的手机端页面 <br/>
 
-> [预览地址](http://39.106.112.168/qunar)
+> <a href="http://39.106.112.168/qunar" target="_blank">预览地址</a>
 
 ## 首页预览
   ![首页预览](https://github.com/JudTX/qunar/raw/master/img/qunar-index1.png) ![首页预览](https://github.com/JudTX/qunar/raw/master/img/qunar-index2.png)
