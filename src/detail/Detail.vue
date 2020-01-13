@@ -6,9 +6,7 @@
     :gallaryImgs="gallaryImgs"
     ></detailbanner>
     <detailheader></detailheader>
-    <div class="conter">
-      <detaillist :list="list"></detaillist>
-    </div>
+    <detaillist :list="list"></detaillist>
   </div>
 </template>
 
