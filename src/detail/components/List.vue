@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="item" v-for="(item, index) of list" :key="index" @click="itemclick(index)">
+    <div class="item" v-for="(item, index) of list" :key="index">
       <div class="item-title border-bottom">
         <span class="item-icon"></span>
         {{item.title}}
       </div>
-      <div v-if="item.children" class="item-children" v-show="show == index">
+      <div v-if="item.children" class="item-children">
         <detaillist :list="item.children"></detaillist>
       </div>
     </div>
@@ -15,11 +15,6 @@
 <script>
 export default {
   name: 'detaillist',
-  data () {
-    return {
-      show: -1
-    }
-  },
   props: {
     list: Array
   },

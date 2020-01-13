@@ -23,5 +23,9 @@ export default new Router({
       name: detail,
       component: detail
     }
-  ]
+  ],
+  // 每次路由时重新定位页面位置
+  scrollBehavior (to, from, savedPosition) {
+    return {x: 0, y: 0}
+  }
 })
